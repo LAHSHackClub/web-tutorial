@@ -25,6 +25,6 @@ This is just the basic setup of a website. You have to add your own elements to 
 | `<h1>`        | Header Element -  `<h2>`, `<h3>`, `<h4>`, etc. represent different levels of headers. | `<h1>I am a header</h1>` |
 | `<a>`         | Hyperlink Element - Use special attribute `href` to specify the link to visit. | `<a href="lahs.club">This links to our main website!</a>` |
 | `<div>`       | Content Division Element - Typically used for general purpose, like creating a box, or a positioned block of elements. | `<div>` |
-| | | `  <h1>Header</h1>` |
-| | | `  <p>This is a block of many elements!</p>` |
-| | | `</div>` |
+|               |                                                                       | `  <h1>Header</h1>` |
+|               |                                                                       | `  <p>This is a block of many elements!</p>` |
+|               |                                                                       | `</div>` |
