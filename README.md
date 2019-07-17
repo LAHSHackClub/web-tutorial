@@ -1,7 +1,7 @@
 # Intro to Web Dev - Week 1
 
 ## Starting with HTML
-After going through the [Hack Club Workshop](https://hackclub.com/workshops/personal_website), you now know how to create a static website with all the basic HTML elements. Just as a reminder, here is the basic setup of every HTML file before you get started working:
+The term HTML stands for _HyperText Markup Language_, and is used to create a layout for all websites. After going through the [Hack Club Workshop](https://hackclub.com/workshops/personal_website), you now know how to create a static website with all the basic HTML elements. Just as a reminder, here is the basic setup of every HTML file before you get started working:
 ```html
 <!DOCTYPE HTML>
 <html>
@@ -23,8 +23,20 @@ This is just the basic setup of a website. You have to add your own elements to 
 
 ## HTML Elements
 
-<table>
-<tr><td>HTML Tag</td><td>Description</td><td>Example Usage</td></tr>
+There are so many HTML elements that you can use, no one knows them all! You can view the complete list [here](https://www.w3schools.com/tags/). It is important to think of HTML Elements as _DOM_ elements, or elements in the _Document Object Model_. In this model, every element is a node in a tree structure, where one element may be nested in another element, like how all of your displayed elements are nested under `<body>`. Having this understanding of _nesting_ early on in your web development career can help you more easily manipulate elements later on with CSS and JavaScript.
+
+## CSS `.css`
+
+You may have gotten to CSS on the Hack Club Workshop. If you didn't, don't worry about it! The acronym CSS stands for _Cascade Style Sheets_, and they are used for styling your website. For example, if I want to change the color of all of my paragraph elements to pink, then I can write in my `main.css` file the following lines of code:
+```css
+p {
+  color: pink;
+}
+```
+Of course, there is so much more CSS can do! You can do animations, transitions, change the background of your website, blur an image, and more! You can learn more about them [here](https://www.w3schools.com/css/default.asp). In most cases, working with CSS takes intuition and trial and error, so don't worry if you can't memorize all of the style attributes!
+
+<!-- <table>
+<tr><td><b>HTML Tag</b></td><td><b>Description</b></td><td><b>Example Usage</b></td></tr>
 <tr>
 <td>
 
@@ -74,6 +86,21 @@ This is just the basic setup of a website. You have to add your own elements to 
 <tr>
 <td>
 
+`<button>`
+
+</td>
+<td>Button Element - You know what a button is! A button is often used to trigger a JavaScript event, but we wil get to that later!</td>
+<td>
+
+```html
+<button onclick="myFunction();">Click Me!</button>
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
 `<div>`
 
 </td>
@@ -107,4 +134,8 @@ This is just the basic setup of a website. You have to add your own elements to 
 
 </td>
 </tr>
-</table>
+</table> -->
+
+## JavaScript `.js`
+
+JavaScript is much more complex than HTML and CSS and more difficult to grasp.
