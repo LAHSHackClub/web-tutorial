@@ -25,11 +25,9 @@ This is just the basic setup of a website. You have to add your own elements to 
 <tr>
 <td>
 
-
 ```html
 <div>
 ```
-
 
 </td>
 <td>
@@ -37,14 +35,12 @@ Content Division Element - Typically used for general purpose, like creating a b
 </td>
 <td>
 
-
   ```html
     <div>
       <h1>test</h1>
       <p>test</p>
     </div>
   ```
-
 
 </td>
 </tr>
