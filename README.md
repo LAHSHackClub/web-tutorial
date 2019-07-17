@@ -28,9 +28,7 @@ This is just the basic setup of a website. You have to add your own elements to 
 <tr>
 <td>
 
-```html
-<p>
-```
+`<p>`
 
 </td>
 <td>Paragraph Element - Normal text; often used in subtitles and descriptions.</td>
@@ -45,15 +43,15 @@ This is just the basic setup of a website. You have to add your own elements to 
 <tr>
 <td>
 
-```html
-<h1>, <h2>, <h3>, <h4>, <h5>, <h6>
-```
+`<h1>, <h2>, <h3>, <h4>, <h5>, <h6>`
 
 </td>
 <td>Header Elements - Paragraph headers and titles in order of importance.</td>
 <td>
 
 ```html
+<h1>I am a header!</h1>
+<h2>I am a lower header...</h2>
 ```
 
 </td>
@@ -61,9 +59,22 @@ This is just the basic setup of a website. You have to add your own elements to 
 <tr>
 <td>
 
+`<a>`
+
+</td>
+<td>Hyperlink Element - Allow a text to redirect the user to a link. Use the "href" attribute to add a link to your text.</td>
+<td>
+
 ```html
-<div>
+<a href="lahs.club">This is our main website!</a>
 ```
+
+</td>
+</tr>
+<tr>
+<td>
+
+`<div>`
 
 </td>
 <td>Content Division Element - Typically used for general purpose, like creating a box, or a positioned block of elements. This element defaults to "block" display.</td>
@@ -81,9 +92,7 @@ This is just the basic setup of a website. You have to add your own elements to 
 <tr>
 <td>
 
-```html
-<span>
-```
+`<span>`
 
 </td>
 <td>Span Element - Serves the same purpose as div of grouping elements, but defaults to "inline-block" display, meaning that it will not create its own line.</td>
