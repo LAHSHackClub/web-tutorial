@@ -160,7 +160,7 @@ var notNumber = NaN;      // If you do something like "text" / 3, then JavaScrip
 
 // Strings
 var doubleQuotes = "Hello World!";
-var singleQuotes = "Hello World!";
+var singleQuotes = 'Hello World!'; // No different from double quotes
 var backticks = `Hello World! 1 + 122 is ${1 + 122}, or ${integer}`; // Can be used to embed an expression or a variable
 
 // Booleans
