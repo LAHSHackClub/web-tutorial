@@ -2,7 +2,7 @@
 
 ## Starting with HTML
 After going through the [Hack Club Workshop](https://hackclub.com/workshops/personal_website), you now know how to create a static website with all the basic HTML elements. Just as a reminder, here is the basic setup of every HTML file before you get started working:
-```
+```html
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -10,9 +10,12 @@ After going through the [Hack Club Workshop](https://hackclub.com/workshops/pers
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Title Here!</title>
+
+  <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-
+  <!-- All your displayed content goes here -->
+  <script src="index.js"></script>
 </body>
 </html>
 ```
@@ -26,21 +29,72 @@ This is just the basic setup of a website. You have to add your own elements to 
 <td>
 
 ```html
+<p>
+```
+
+</td>
+<td>Paragraph Element - Normal text; often used in subtitles and descriptions.</td>
+<td>
+
+```html
+<p>Hello! I am a paragraph!</p>
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+```html
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6>
+```
+
+</td>
+<td>Header Elements - Paragraph headers and titles in order of importance.</td>
+<td>
+
+```html
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+```html
 <div>
 ```
 
 </td>
-<td>
-Content Division Element - Typically used for general purpose, like creating a box, or a positioned block of elements.
-</td>
+<td>Content Division Element - Typically used for general purpose, like creating a box, or a positioned block of elements. This element defaults to "block" display.</td>
 <td>
 
-  ```html
-    <div>
-      <h1>test</h1>
-      <p>test</p>
-    </div>
-  ```
+```html
+<div>
+  <h1>Block Title</h1>
+  <p>Block Paragraph</p>
+</div>
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+```html
+<span>
+```
+
+</td>
+<td>Span Element - Serves the same purpose as div of grouping elements, but defaults to "inline-block" display, meaning that it will not create its own line.</td>
+<td>
+
+```html
+<span>
+  <h1>I am Inline!</h1>
+  <p>Me too!</p>
+</span>
+```
 
 </td>
 </tr>
