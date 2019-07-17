@@ -19,6 +19,7 @@ After going through the [Hack Club Workshop](https://hackclub.com/workshops/pers
 This is just the basic setup of a website. You have to add your own elements to it! Check out the list below for all the elements you can use!
 
 ## HTML Elements
-| HTML Tag   | Description             | Example Usage                  |
-| ---------- | ----------------------- | ------------------------------ |
-| p          | Paragraph               | `<p>This is a paragraph.</p>`    |
+| HTML Tag   | Description                                                           | Example Usage                  |
+| ---------- | --------------------------------------------------------------------- | ------------------------------ |
+| `<p>`      | Paragraph                                                             | `<p>This is a paragraph.</p>`  |
+| `<h1>`     | Header; `<h2>`, `<h3>`, `<h4>`, etc. represent different levels of headers. | `<h1>I am a header</h1>` |
