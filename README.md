@@ -35,7 +35,7 @@ This is just the basic setup of a website. You have to add your own elements to 
 <th><td>HTML Tag</td><td>Description></td><td>Example Usage</td></th>
 <tr><td>`<div>`</td><td>Content Division Element - Typically used for general purpose, like creating a box, or a positioned block of elements.</td>
 <td>
-  ```
+  ```html
     <div>
       <h1>test</h1>
       <p>test</p>
