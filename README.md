@@ -1,6 +1,6 @@
 # Intro to Web Dev - Week 1
 
-## Starting with HTML
+## Starting with HTML `.html`
 The term HTML stands for _HyperText Markup Language_, and is used to create a layout for all websites. After going through the [Hack Club Workshop](https://hackclub.com/workshops/personal_website), you now know how to create a static website with all the basic HTML elements. Just as a reminder, here is the basic setup of every HTML file before you get started working:
 ```html
 <!DOCTYPE HTML>
@@ -138,4 +138,102 @@ Of course, there is so much more CSS can do! You can do animations, transitions,
 
 ## JavaScript `.js`
 
-JavaScript is much more complex than HTML and CSS and more difficult to grasp.
+JavaScript is much more expansive than CSS and HTML, having applications in web development, app development, database management, and more. Many popular frameworks, or programming models, are based off of JavaScript, including NodeJS and ElectronJS, a framework used to build Discord and Slack. We will get to the applications of JavaScript outside of web development in the future, but for front-end development, JavaScript is essential to building a dynamic website instead of a static one.
+
+Throughout this tutorial, we will be using JQuery, a popular JavaScript library that simplifies DOM manipulation and dynamic styling. To get JQuery, you can simply use a _CDN_, or Content Delivery Network, that serves a library via the network instead of locally:
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+```
+
+We will get to using JQuery later on. Before then, you should become more familiar with native JavaScript. Here are some examples to help you get started:
+
+### Variables
+JavaScript is dynamically typed, meaning that you do not have to specify the datatype of a variable when you are declaring one. However, you should still know the primitive data types:
+
+```js
+// Numbers
+var integer = 123;        // Integers
+var doubles = 123.456;    // Floats and Doubles. In most programming languages, these belong to a separate data type. However, JavaScript treats them as the same data type.
+var infinity = Infinity;  // A special numerical value; often the result of 1/0
+var notNumber = NaN;      // If you do something like "text" / 3, then JavaScript would allow you to do that, but tell you that the result is "Not a Number"
+
+// Strings
+var doubleQuotes = "Hello World!";
+var singleQuotes = "Hello World!";
+var backticks = `Hello World! 1 + 122 is ${1 + 122}, or ${integer}`; // Can be used to embed an expression or a variable
+
+// Booleans
+var trueStatement = true;
+var falseStatement = false;
+var condition = 3 < 1; // This evalutes to false
+
+// Special Cases
+var doesNotExist = null;    // When a variable does not exist
+var noAssigned = undefined; // When a variable exists but does not have a value associated with it
+
+typeof integer // You can use this operation to determine the type of a variable. In this case, this operation will return "number". This will be useful once you have variables with self-defined types
+
+```
+There are two more datatypes: object and symbol. Neither of these types are primitive datatypes.
+
+<b>Object</b>: More complex data structures. This is often an "object" that you define, which can be treated as a type, but always be classified by JavaScript as belonging to the "object" type
+
+<b>Symbol</b>: Unique identifiers for objects. You will be unlikely to encounter these until you become proficient in JavaScript.
+
+There are three ways of defining variables in JavaScript:
+```js
+const constant = 0;      // A constant, meaning that this variable cannot be changed after declaration.
+let blockScoped = 0;     // Block scoped. This means that if this variable is called before declaration under the same "scope," then your script would error and tell you that the variable does not exist.
+var functionScoped = 0;  // Function scoped. This means that if this variable is called before declaration under the same "scope," then your script will simply tell you that the variable exists, but does not have a value assigned to it.
+```
+### Conditional Statements
+Conditional Statements are something you use to trigger an event under certain conditions. For example, I can tell my script to say "Hi" if my name is "Leo", "Hello" if my name is "Leon", and "Hey" otherwise. Here is how you would accomplish that in JavaScript:
+```js
+if (name === "Leo") {
+  console.log("Hi");
+} else if (name === "Leon") {
+  console.log("Hello");
+} else {
+  console.log("Hey");
+}
+```
+There are several other ways of accomplishing the same task! You can use switches or ternary operators. Ternary operators are better for conditions that only have two outcomes: true or false, so we will use "Leo" or not for that example.
+```js
+// Swithces
+switch(name) {
+  case "Leo":
+    console.log("Hi");
+    break; // This statement is required at the end of every case in a switch statement
+  case "Leon":
+    console.log("Hello");
+    break;
+  default:
+    console.log("Hey");
+    break;
+}
+
+// Ternary Operator
+console.log((name === "Leo") ? "Hi" : "Hey") // Prints out "Hi" if the name is Leo, otherwise "Hey"
+```
+
+### Functions
+Functions are extremely important when it comes to front-end development, because dynamic events such as a button click relies on calling a function once they are triggered. A function is essentially a sequence of tasks that will be executed once the function is called. There are several ways of defining a function in JavaScript:
+```js
+// The most common form of function declaration. You can declare this function after it is called.
+function myFunction(a, b) {
+  return a + b;
+}
+
+// This is called a function expression. If you call this function before it is called, you will get TypeError: myFunction is not a function.
+var myFunction = function (a, b) {
+  return a + b;
+}
+
+// This is called an arrow function. It wlil also error if called before the declaration. This type of function is most commonly seen in asynchronous handling and function mapping, which are beyond the scope of this tutorial.
+var myFunction = (a, b) => {
+  return a + b;
+}
+```
+
+That's it with the basics! We will not get into more advanced stuffs such as classes and JSON data structure until later in the tutorial. Make sure you are familiar with these concepts before moving on!
