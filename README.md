@@ -20,12 +20,32 @@ This is just the basic setup of a website. You have to add your own elements to 
 
 ## HTML Elements
 
-| Status | Response  |
-| ------ | --------- |
-| 200    | `json`                          |
-|        | `   {`                          |
-|        | ` "id": 10,`                    |
-|        | ` "username": "alanpartridge",` |
-|        | ` more code...`                 |
-|        | `}`                             |
-| 400    |                                 |
+<table>
+<tr><td>HTML Tag</td><td>Description</td><td>Example Usage</td></tr>
+<tr>
+<td>
+
+
+```html
+<div>
+```
+
+
+</td>
+<td>
+Content Division Element - Typically used for general purpose, like creating a box, or a positioned block of elements.
+</td>
+<td>
+
+
+  ```html
+    <div>
+      <h1>test</h1>
+      <p>test</p>
+    </div>
+  ```
+
+
+</td>
+</tr>
+</table>
