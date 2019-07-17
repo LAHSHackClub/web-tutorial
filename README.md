@@ -22,7 +22,15 @@ This is just the basic setup of a website. You have to add your own elements to 
 
 <table>
 <tr><td>HTML Tag</td><td>Description</td><td>Example Usage</td></tr>
-<tr><td>```<div>```</td><td>Content Division Element - Typically used for general purpose, like creating a box, or a positioned block of elements.</td>
+<tr>
+<td>
+```html
+<div>
+```
+</td>
+<td>
+Content Division Element - Typically used for general purpose, like creating a box, or a positioned block of elements.
+</td>
 <td>
   ```html
     <div>
