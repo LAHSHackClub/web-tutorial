@@ -1,239 +1,62 @@
-# Intro to Web Dev - Week 1
+# Intro to Web Dev - Week 2
 
-## Starting with HTML `.html`
-The term HTML stands for _HyperText Markup Language_, and is used to create a layout for all websites. After going through the [Hack Club Workshop](https://hackclub.com/workshops/personal_website), you now know how to create a static website with all the basic HTML elements. Just as a reminder, here is the basic setup of every HTML file before you get started working:
+## Web Layouts
+
+### Flow Layout `display: block | inline | inline-block`
+This is the default layout of any HTML page; it is the way _block_ (`display: block`) and _inline_ (`display: inline`) elements behave without any modifications. Normally, a block element occupy an entire line, pushing the element after it below. An inline element, as the name suggests, stays in line as long as the element before and after it permits it. For example, if you have an inline element in between texts, it would stay in line with the text instead of breaking the text into two blocks like a block element would.
+
+An _inline block_ element (`display: inline-block`) behaves in the same way as an inline element, except its width and height can be changed.
+
+It is important to note that all elements in a flow layout has an attribute of `position: relative`, which allows them to render with respect to the flow of elements around them. In addition, they also have `float: left` to keep them stacking from left to right. You can change the flow of your elements to be from right to left by changing that attribute to `float: right`, or `clear: left | right | both` to remove this characteristic when working with different layouts.
+
+### Grid Layout `display: grid | inline-grid`
+As the name suggests, grid layout creates a grid in which elements are displayed. The attribute `display: grid` should be applied to a container, in which its child elements would be automatically displayed as grid elements. It is important to note that the child elements of a grid element do not follow a grid layout, which is expected since you rarely want nested grids.
+
+For better demonstration, let us assume that we have a `.container` with the attribute `display: grid`, with child elements `.item`:
 ```html
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Title Here!</title>
-
-  <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
-<body>
-  <!-- All your displayed content goes here -->
-  <script src="index.js"></script>
-</body>
-</html>
-```
-This is just the basic setup of a website. You have to add your own elements to it! Check out the list below for all the elements you can use!
-
-## HTML Elements
-
-There are so many HTML elements that you can use, no one knows them all! You can view the complete list [here](https://www.w3schools.com/tags/). It is important to think of HTML Elements as _DOM_ elements, or elements in the _Document Object Model_. In this model, every element is a node in a tree structure, where one element may be nested in another element, like how all of your displayed elements are nested under `<body>`. Having this understanding of _nesting_ early on in your web development career can help you more easily manipulate elements later on with CSS and JavaScript.
-
-## CSS `.css`
-
-You may have gotten to CSS on the Hack Club Workshop. If you didn't, don't worry about it! The acronym CSS stands for _Cascade Style Sheets_, and they are used for styling your website. For example, if I want to change the color of all of my paragraph elements to pink, then I can write in my `main.css` file the following lines of code:
-```css
-p {
-  color: pink;
-}
-```
-Of course, there is so much more CSS can do! You can do animations, transitions, change the background of your website, blur an image, and more! You can learn more about them [here](https://www.w3schools.com/css/default.asp). In most cases, working with CSS takes intuition and trial and error, so don't worry if you can't memorize all of the style attributes!
-
-<!-- <table>
-<tr><td><b>HTML Tag</b></td><td><b>Description</b></td><td><b>Example Usage</b></td></tr>
-<tr>
-<td>
-
-`<p>`
-
-</td>
-<td>Paragraph Element - Normal text; often used in subtitles and descriptions.</td>
-<td>
-
-```html
-<p>Hello! I am a paragraph!</p>
-```
-
-</td>
-</tr>
-<tr>
-<td>
-
-`<h1>, <h2>, <h3>, <h4>, <h5>, <h6>`
-
-</td>
-<td>Header Elements - Paragraph headers and titles in order of importance.</td>
-<td>
-
-```html
-<h1>I am a header!</h1>
-<h2>I am a lower header...</h2>
-```
-
-</td>
-</tr>
-<tr>
-<td>
-
-`<a>`
-
-</td>
-<td>Hyperlink Element - Allow a text to redirect the user to a link. Use the "href" attribute to add a link to your text.</td>
-<td>
-
-```html
-<a href="lahs.club">This is our main website!</a>
-```
-
-</td>
-</tr>
-<tr>
-<td>
-
-`<button>`
-
-</td>
-<td>Button Element - You know what a button is! A button is often used to trigger a JavaScript event, but we wil get to that later!</td>
-<td>
-
-```html
-<button onclick="myFunction();">Click Me!</button>
-```
-
-</td>
-</tr>
-<tr>
-<td>
-
-`<div>`
-
-</td>
-<td>Content Division Element - Typically used for general purpose, like creating a box, or a positioned block of elements. This element defaults to "block" display.</td>
-<td>
-
-```html
-<div>
-  <h1>Block Title</h1>
-  <p>Block Paragraph</p>
+<div class='container'>
+  <div class='item'></div>
+  <div class='item'></div>
+  <div class='item'></div>
 </div>
 ```
+**Container `.container`**
 
-</td>
-</tr>
-<tr>
-<td>
-
-`<span>`
-
-</td>
-<td>Span Element - Serves the same purpose as div of grouping elements, but defaults to "inline-block" display, meaning that it will not create its own line.</td>
-<td>
-
-```html
-<span>
-  <h1>I am Inline!</h1>
-  <p>Me too!</p>
-</span>
-```
-
-</td>
-</tr>
-</table> -->
-
-## JavaScript `.js`
-
-JavaScript is much more expansive than CSS and HTML, having applications in web development, app development, database management, and more. Many popular frameworks, or programming models, are based off of JavaScript, including NodeJS and ElectronJS, a framework used to build Discord and Slack. We will get to the applications of JavaScript outside of web development in the future, but for front-end development, JavaScript is essential to building a dynamic website instead of a static one.
-
-Throughout this tutorial, we will be using JQuery, a popular JavaScript library that simplifies DOM manipulation and dynamic styling. To get JQuery, you can simply use a _CDN_, or Content Delivery Network, that serves a library via the network instead of locally:
-
-```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-```
-
-We will get to using JQuery later on. Before then, you should become more familiar with native JavaScript. Here are some examples to help you get started:
-
-### Variables
-JavaScript is dynamically typed, meaning that you do not have to specify the datatype of a variable when you are declaring one. However, you should still know the primitive data types:
-
-```js
-// Numbers
-var integer = 123;        // Integers
-var doubles = 123.456;    // Floats and Doubles. In most programming languages, these belong to a separate data type. However, JavaScript treats them as the same data type.
-var infinity = Infinity;  // A special numerical value; often the result of 1/0
-var notNumber = NaN;      // If you do something like "text" / 3, then JavaScript would allow you to do that, but tell you that the result is "Not a Number"
-
-// Strings
-var doubleQuotes = "Hello World!";
-var singleQuotes = 'Hello World!'; // No different from double quotes
-var backticks = `Hello World! 1 + 122 is ${1 + 122}, or ${integer}`; // Can be used to embed an expression or a variable
-
-// Booleans
-var trueStatement = true;
-var falseStatement = false;
-var condition = 3 < 1; // This evalutes to false
-
-// Special Cases
-var doesNotExist = null;    // When a variable does not exist
-var noAssigned = undefined; // When a variable exists but does not have a value associated with it
-
-typeof integer // You can use this operation to determine the type of a variable. In this case, this operation will return "number". This will be useful once you have variables with self-defined types
-
-```
-There are two more datatypes: object and symbol. Neither of these types are primitive datatypes.
-
-<b>Object</b>: More complex data structures. This is often an "object" that you define, which can be treated as a type, but always be classified by JavaScript as belonging to the "object" type
-
-<b>Symbol</b>: Unique identifiers for objects. You will be unlikely to encounter these until you become proficient in JavaScript.
-
-There are three ways of defining variables in JavaScript:
-```js
-const constant = 0;      // A constant, meaning that this variable cannot be changed after declaration.
-let blockScoped = 0;     // Block scoped. This means that if this variable is called before declaration under the same "scope," then your script would error and tell you that the variable does not exist.
-var functionScoped = 0;  // Function scoped. This means that if this variable is called before declaration under the same "scope," then your script will simply tell you that the variable exists, but does not have a value assigned to it.
-```
-### Conditional Statements
-Conditional Statements are something you use to trigger an event under certain conditions. For example, I can tell my script to say "Hi" if my name is "Leo", "Hello" if my name is "Leon", and "Hey" otherwise. Here is how you would accomplish that in JavaScript:
-```js
-if (name === "Leo") {
-  console.log("Hi");
-} else if (name === "Leon") {
-  console.log("Hello");
-} else {
-  console.log("Hey");
+You can define the dimensions of the grid container and its grid cells using attributes `grid-template-columns` and `grid-template-rows`:
+```css
+.container {
+  grid-template-columns: 30% 20px auto 40px 50px;
+  grid-template-rows: 1fr 2fr 40px 30px;
 }
 ```
-There are several other ways of accomplishing the same task! You can use switches or ternary operators. Ternary operators are better for conditions that only have two outcomes: true or false, so we will use "Leo" or not for that example.
-```js
-// Swithces
-switch(name) {
-  case "Leo":
-    console.log("Hi");
-    break; // This statement is required at the end of every case in a switch statement
-  case "Leon":
-    console.log("Hello");
-    break;
-  default:
-    console.log("Hey");
-    break;
-}
+The code above creates a grid which contains 5 rows and 4 columns. The grid items (in our case 3) will fill from the cell in the top left corner to the right unless specified otherwise. Each column and each row is designated a dimension, of which `auto` and `fr` are special cases. `auto` allows that column/row to be assigned a size based on whatever space is left of the container. `fr` is a fractional unit which stands for a part of the available space. For example, in our case 70px of the row space is taken (40px + 30px). Since we have a total of 3fr in that space, the remaining row space (subtracting 70px) is divided into 3, of which 1/3 of the space is assigned to the first row and 2/3 to the second row.
 
-// Ternary Operator
-console.log((name === "Leo") ? "Hi" : "Hey") // Prints out "Hi" if the name is Leo, otherwise "Hey"
-```
+Another powerful feature of a grid container is `grid-area`, which we will not cover here due to its complexity.
 
-### Functions
-Functions are extremely important when it comes to front-end development, because dynamic events such as a button click relies on calling a function once they are triggered. A function is essentially a sequence of tasks that will be executed once the function is called. There are several ways of defining a function in JavaScript:
-```js
-// The most common form of function declaration. You can declare this function after it is called.
-function myFunction(a, b) {
-  return a + b;
-}
+**Grid Item `.item`**
 
-// This is called a function expression. If you call this function before it is called, you will get TypeError: myFunction is not a function.
-var myFunction = function (a, b) {
-  return a + b;
-}
-
-// This is called an arrow function. It wlil also error if called before the declaration. This type of function is most commonly seen in asynchronous handling and function mapping, which are beyond the scope of this tutorial.
-var myFunction = (a, b) => {
-  return a + b;
+While a grid item normally occupies one grid cell, you can allow it to span across multiple columns and rows:
+```css
+.item {
+  grid-column: 3 / span 3;
+  grid-row: fifth-line / 7;
 }
 ```
+In this case, our item will occupy from the third column to the sixth column, and from the fifth row to the seventh row. This can also be expressed like so:
+```css
+.item {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+```
+An important distinction to be made is that a grid item is not the same as a _grid cell_. As the above example demonstrates, a grid item can spread across multiple cells. A grid item may also be smaller than a grid cell, which means it can be formatted with respect to the grid cell:
+```css
+.item {
+  justify-self: start | end | center | stretch;
+}
+```
+`start` aligns the item to the left of the cell, while `end` aligns it to the right and `center` aligns it to the center. `stretch` allows the item to cover the entire grid cell. There are other alignment attributes such as `align-self` and `place-self`. They are virtually the same as `justify-self`; their intricate differences are beyond the scope of this tutorial.
 
-That's it with the basics! We will not get into more advanced stuffs such as classes and JSON data structure until later in the tutorial. Make sure you are familiar with these concepts before moving on!
+### Flex Layout

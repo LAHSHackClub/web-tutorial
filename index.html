@@ -12,62 +12,42 @@ This way, I can explain a lot about my code without having these ugly descriptio
 <!DOCTYPE html> <!-- This tells the web browser that we are using the latest version of HTML - HTML 4.01 -->
 <html>
 <head>
-  <title>Intro to Web Dev - Week One</title> <!-- This shows up as the label on the browser tab! -->
-
-  <!--
-  Meta tags
-
-  These are information about your website that a browser can take in to understand how to render your website correctly.
-  It can also allow your browser to give your website a stronger profile on its search results.
-  If you have heard of SEO, this is how professionals put their client's websites on the top of your Google search results.
-  -->
+  <title>Intro to Web Dev - Week Two</title> <!-- This shows up as the label on the browser tab! -->
   <meta charset="UTF-8" />
-  <meta name="description" content="This is how you add a description to your website. This is what you see as the description underneath the link of your website on a normal web search." />
-  <meta name="keywords" content="HTML,Tutorial,Web Dev">
-  <meta name="author" content="Leo Lin, because I made this :)" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- This is very important! It allows you to customize your website to be compatible with different device dimensions, which we will talk about later. -->
+  <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
-  <!-- Big websites often need navigation controls, which is specified by these tags. -->
-  <nav>
-  </nav>
+  <article id="flow">
+    <div id="block">
+      <p>A block element is aggressive! Look how it c<span>ut</span> right through this paragraph!</p>
+    </div>
+    <div id="inline">
+      <p>An inline element bl<span>end</span> right in!</p>
+    </div>
+    <div id="inline-block">
+      <p>An inline block element can be resized! so conve<span>nient!</span> Much wow!</p>
+    </div>
+  </article>
 
-  <header>
-    <h1>This is a header</h1>
-    <p>The header should always be on the top of the page and easily visible. Notice how the title is bolded.</p>
-  </header>
+  <article id="grid">
+    <div class="container">
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+    </div>
+  </article>
 
-  <main>
-    <article>
-      <h2>Article 1</h2>
-      <section>
-        <h3>Section 1</h3>
-        <p>You can divide your page</p>
-      </section>
-      <section>
-        <h3>Section 2</h3>
-        <p>into sections.</p>
-      </section>
-    </article>
-
-    <article>
-      <h2>Article 2</h2>
-      <section>
-        <h3>Or articles!</h3>
-      </section>
-    </article>
-
-    <article>
-      <h2>Article 3</h2>
-      <p>Hello this is article 3!</p>
-      <section>
-      </section>
-    </article>
-  </main>
-
-  <footer>
-    <p>This is generally where you put the author of the website, publication date, copyright message, etc.</p>
-    <a href="www.facebook.com">You can also put in social media links!</a>
-  </footer>
+  <article id="flex">
+    <div class="container">
+    </div>
+  </article>
 </body>
 </html>
